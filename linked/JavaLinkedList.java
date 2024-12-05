@@ -1,7 +1,7 @@
 package linked;//(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
+//Name - Adnan Chowdhury
 
 import java.util.LinkedList;
 import static java.lang.System.*;

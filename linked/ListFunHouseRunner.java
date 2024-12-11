@@ -39,8 +39,13 @@ public class ListFunHouseRunner
 		ListFunHouse.doubleLast(z);		
 		out.println("\nList values after calling doubleLast\n");							
 		ListFunHouse.print(z);
-		out.println();				
-				
+		out.println();
+
+		ListFunHouse.skipEveryOther(z);
+		out.println("\nList values after calling skipEveryOther\n");
+		ListFunHouse.print(z);
+		out.println();
+
 		ListFunHouse.removeXthNode(z,2);		
 		out.println("\nList values after calling removeXthNode(2)\n");					
 		ListFunHouse.print(z);

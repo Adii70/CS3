@@ -1,7 +1,7 @@
 package SantaStuff;
 
 public class child {
-    naughtyAndNice bob = new naughtyAndNice();
+
     private int age;
     private String name;
     private String address;
@@ -16,6 +16,9 @@ public class child {
         address = ad;
         niceLvl = false;
     }
+    public void setNiceLvl(boolean choice){
+        niceLvl = choice;
+    }
     public int getAge(){
         return age;
     }
@@ -25,20 +28,8 @@ public class child {
     public String getAddress(){
         return address;
     }
-    public void determineNiceLvl(){
-        int niceCount = bob.getNumberOfNice(this);
-        int naughtyCount = bob.getNumberOfNaughty(this);
-
-        if (niceCount > naughtyCount){
-            niceLvl = true;
-        }
-        if (naughtyCount > niceCount){
-            niceLvl = false;
-        }
-        if (naughtyCount == niceCount){
-            niceLvl = false;
-        }
-
+    public boolean getNiceLvl(){
+        return niceLvl;
     }
     public String toString(){
         String choice;

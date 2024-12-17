@@ -27,12 +27,30 @@ public class naughtyAndNice {
 
         }
     }
-    public int getNumberOfNice(child c){
-        int count = niceMap.get(c).size();
+    public int getNumberOfNice(child c) {
+        int count = 0;
+        if (!niceMap.get(c).isEmpty()) {
+            count = niceMap.get(c).size();
+        }
+
         return count;
     }
     public int getNumberOfNaughty(child c){
-        int count = naughtyMap.get(c).size();
+        int count = 0;
+        if (!naughtyMap.get(c).isEmpty()){
+            count = naughtyMap.get(c).size();
+        }
         return count;
+    }
+    public void determineNiceLvl(child c){
+        if (getNumberOfNice(c)> getNumberOfNaughty(c)){
+            c.setNiceLvl(true);
+        }
+        if (getNumberOfNaughty(c) > getNumberOfNice(c)){
+            c.setNiceLvl(false);
+        }
+        if (getNumberOfNice(c) == getNumberOfNaughty(c)){
+            c.setNiceLvl(false);
+        }
     }
 }

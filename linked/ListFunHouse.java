@@ -59,9 +59,7 @@ public class ListFunHouse
 	{
 
 		while (list.getNext() != null){
-			if (list.getNext().getNext()!=null){
-				list = list.getNext().getNext();
-			}
+				list = list.getNext();
 		}
 	}
 

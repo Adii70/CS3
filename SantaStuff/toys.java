@@ -19,7 +19,7 @@ public class toys {
     }
 
     public void determine(child c) {
-        if (c.getNiceLvl()) {
+        if (c.getNiceLvl() > 0) {
             if (toys.get(c).isEmpty() || !toys.get(c).peek().equals("Coal")) {
                 toys.get(c).push("Toy");
             }
@@ -27,7 +27,7 @@ public class toys {
                 toys.get(c).pop();
             }
         }
-        if (!c.getNiceLvl()) {
+        if (c.getNiceLvl() <= 0) {
             if (toys.get(c).isEmpty() || toys.get(c).peek().equals("Coal")) {
                 toys.get(c).push("Coal");
             }
@@ -39,12 +39,12 @@ public class toys {
 
     }
 
-    public void showAll(child c) {
+    public String showAll(child c) {
         String theToys = "";
         while (!toys.get(c).isEmpty()){
             theToys += toys.get(c).pop() + " " ;
         }
-        System.out.println("Bob : " + theToys);
+        return c.getName() + " : " + theToys;
 
     }
 }

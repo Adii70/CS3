@@ -1,11 +1,11 @@
 package SantaStuff;
 
-public class child {
+public class child implements Comparable <child>{
 
     private int age;
     private String name;
     private String address;
-    private boolean niceLvl;
+    private int niceLvl;
 
     public child (){
 
@@ -14,9 +14,9 @@ public class child {
         age = a;
         name = s;
         address = ad;
-        niceLvl = false;
+        niceLvl = 0;
     }
-    public void setNiceLvl(boolean choice){
+    public void setNiceLvl(int choice){
         niceLvl = choice;
     }
     public int getAge(){
@@ -28,17 +28,23 @@ public class child {
     public String getAddress(){
         return address;
     }
-    public boolean getNiceLvl(){
+    public int getNiceLvl(){
         return niceLvl;
     }
     public String toString(){
-        String choice;
-        if (niceLvl == true){
-            choice = "1";
-        }
-        else {
-            choice = "0";
-        }
-        return "Name : " + getName() + ", Age : " + getAge() + ", Nice level : " + choice + ", Address : " + getAddress();
+
+        return "Name : " + getName() + ", Age : " + getAge() + ", Nice level : " + niceLvl + ", Address : " + getAddress() + "\n";
     }
-}
+
+    @Override
+    public int compareTo(child o) {
+        if (getNiceLvl() < o.getNiceLvl()){
+            return -1;
+        }
+        if (getNiceLvl() > o.getNiceLvl()){
+            return 1;
+        }
+        return 0;
+    }
+    }
+

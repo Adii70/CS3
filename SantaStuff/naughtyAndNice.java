@@ -44,13 +44,13 @@ public class naughtyAndNice {
     }
     public void determineNiceLvl(child c){
         if (getNumberOfNice(c)> getNumberOfNaughty(c)){
-            c.setNiceLvl(true);
+            c.setNiceLvl(getNumberOfNice(c) - getNumberOfNaughty(c));
         }
         if (getNumberOfNaughty(c) > getNumberOfNice(c)){
-            c.setNiceLvl(false);
+            c.setNiceLvl(getNumberOfNice(c) - getNumberOfNaughty(c));
         }
         if (getNumberOfNice(c) == getNumberOfNaughty(c)){
-            c.setNiceLvl(false);
+            c.setNiceLvl(getNumberOfNice(c) - getNumberOfNaughty(c));
         }
     }
 }

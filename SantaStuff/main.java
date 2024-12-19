@@ -1,6 +1,7 @@
 package SantaStuff;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class main {
@@ -38,8 +39,8 @@ public class main {
             theRoute.addChild(childList.get(x));
         }
         for (int x = 0; x < childList.size(); x++){
-            thing.putNice(childList.get(x), "base");
-            thing.putNaughty(childList.get(x), "base");
+            thing.putNice(childList.get(x), "");
+            thing.putNaughty(childList.get(x), "");
         }
 
 
@@ -63,26 +64,44 @@ public class main {
                 if (choice == 2){
                     System.out.println("Enter the child number : ");
                     child temp = childList.get(key.nextInt());
+                    key.nextLine();
                     System.out.println("Enter the nice action");
-                    String action = key.next();
+                    String action = key.nextLine();
                     thing.putNice(temp,action);
+
+                    for (int x = 0; x < childList.size(); x++){
+                        System.out.println(thing.print(childList.get(x)));
+                    }
                 }
                 if (choice == 3){
                     System.out.println("Enter the child number : ");
                     child temp = childList.get(key.nextInt());
+                    key.nextLine();
                     System.out.println("Enter the naughty action");
-                    String action = key.next();
+                    String action = key.nextLine();
                     thing.putNaughty(temp,action);
+
+                  for (int x = 0; x < childList.size(); x++){
+                      System.out.println(thing.print(childList.get(x)));
+                  }
+
                 }
                 if (choice == 4){
-                    System.out.println("Which child do you want to update?");
-                    child temp = childList.get(key.nextInt());
-                    thing.determineNiceLvl(temp);
-                    stuff.determine(temp);
+                    System.out.println("Updating all the children");
+                    for (int x = 0; x < childList.size(); x++){
+                        stuff.determine(childList.get(x));
+                        thing.determineNiceLvl(childList.get(x));
+                        System.out.println(childList.get(x));
+                    }
                 }
                 if (choice == 5){
-                    for (int x = 0; x < childList.size(); x++){
-                        stuff.showAll(childList.get(x));
+                    PriorityQueue<child> theQueue = new PriorityQueue<child>();
+                    for (int x = 0; x < childList.size();x++){
+                        theQueue.add(childList.get(x));
+                    }
+                    while (!theQueue.isEmpty()){
+                        child temp = theQueue.poll();
+                        System.out.println(temp + stuff.showAll(temp)+ " Presents");
                     }
                 }
             }

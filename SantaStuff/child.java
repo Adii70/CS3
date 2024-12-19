@@ -33,16 +33,16 @@ public class child implements Comparable <child>{
     }
     public String toString(){
 
-        return "Name : " + getName() + ", Age : " + getAge() + ", Nice level : " + niceLvl + ", Address : " + getAddress() + "\n";
+        return "Name : " + getName() + ", Age : " + getAge() + ", Nice level : " + niceLvl + ", Address : " + getAddress() ;
     }
 
     @Override
     public int compareTo(child o) {
         if (getNiceLvl() < o.getNiceLvl()){
-            return -1;
+            return 1;
         }
         if (getNiceLvl() > o.getNiceLvl()){
-            return 1;
+            return -1;
         }
         return 0;
     }

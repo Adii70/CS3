@@ -40,12 +40,11 @@ public class toys {
     }
 
     public String showAll(child c) {
-        String theToys = "";
-        while (!toys.get(c).isEmpty()){
-            theToys += toys.get(c).pop() + " " ;
-        }
-        return c.getName() + " : " + theToys;
 
+        int count = toys.get(c).size();
+
+
+        return "" + count;
     }
 }
 

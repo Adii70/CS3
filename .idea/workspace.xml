@@ -43,4 +43,11 @@
     </task>
     <servers />
   </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.util.Hashtable$Entry" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
 </project>

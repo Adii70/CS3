@@ -57,9 +57,9 @@ public class ListFunHouse
 	//method skipEveryOther will remove every other node
 	public static void skipEveryOther(ListNode list)
 	{
-
-		while (list.getNext() != null){
-				list = list.getNext();
+		while (list != null && list.getNext()!= null){
+			list.setNext(list.getNext().getNext());
+			list = list.getNext();
 		}
 	}
 
@@ -67,11 +67,27 @@ public class ListFunHouse
 	public static void setXthNode(ListNode list, int x, Comparable value)
 	{
 		int count=1;
+		while (list != null){
+			if (count % x == 0){
+				list.setValue(value);
+			}
+			list = list.getNext();
+			count++;
+		}
 	}	
 
 	//this method will remove every xth node in the list
 	public static void removeXthNode(ListNode list, int x)
 	{
-
+		int count = 1;
+		while (list != null && list.getNext() != null){
+			if ((count + 1) % x == 0){
+				list.setNext(list.getNext().getNext());
+			}
+			else {
+				list = list.getNext();
+			}
+			count++;
+		}
 	}		
 }

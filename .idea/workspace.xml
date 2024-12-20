@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dddf015-58a7-43a7-9110-94f93740ce25" name="Changes" comment="" />
+    <list default="true" id="1dddf015-58a7-43a7-9110-94f93740ce25" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/linked/ListFunHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/linked/ListFunHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linked/ListFunHouseRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/linked/ListFunHouseRunner.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

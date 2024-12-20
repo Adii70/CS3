@@ -2,7 +2,7 @@ package SantaStuff;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
+// Name: Adnan Chowdhury
 public class naughtyAndNice {
     HashMap<child,ArrayList<String>> niceMap = new HashMap<child,ArrayList<String>>();
     HashMap <child,ArrayList<String>> naughtyMap = new HashMap<child,ArrayList<String>>();

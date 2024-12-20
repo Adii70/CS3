@@ -3,7 +3,7 @@ package SantaStuff;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.Scanner;
-
+// Name: Adnan Chowdhury 
 public class main {
     public static void main (String args[]) {
         ArrayList<child> childList= new ArrayList<child>();
@@ -91,7 +91,7 @@ public class main {
                     for (int x = 0; x < childList.size(); x++){
                         stuff.determine(childList.get(x));
                         thing.determineNiceLvl(childList.get(x));
-                        System.out.println("Nice Level :: " + childList.get(x).getNiceLvl());
+                        System.out.println(childList.get(x).getName() + " Nice Level : : " + childList.get(x).getNiceLvl());
                     }
                 }
                 if (choice == 5){

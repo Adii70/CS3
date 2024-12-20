@@ -53,15 +53,19 @@ public class naughtyAndNice {
             c.setNiceLvl(getNumberOfNice(c) - getNumberOfNaughty(c));
         }
     }
-    public String print(child c){
+    public String printNice(child c){
         String niceOutput = "";
         for (int x = 0; x < niceMap.get(c).size(); x++){
-            niceOutput += niceMap.get(c).get(x) + " ";
+            niceOutput += niceMap.get(c).get(x) + " | ";
         }
+
+        return c.getName() + "- "+ niceOutput ;
+    }
+    public String printNaughty(child c){
         String naughtyOutput = "";
         for (int x = 0; x < naughtyMap.get(c).size(); x++){
-            naughtyOutput += naughtyMap.get(c).get(x) + " ";
+            naughtyOutput += naughtyMap.get(c).get(x) + " | ";
         }
-        return "Nice List: " + "\n" + c + niceOutput + "\n" + "Naughty List: " + "\n" + c + naughtyOutput;
+        return c.getName() + "- "+ naughtyOutput ;
     }
 }

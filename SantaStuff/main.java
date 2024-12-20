@@ -58,7 +58,7 @@ public class main {
                 choice = key.nextInt();
 
                 if (choice == 1) {
-                    System.out.println("List of Children" + "/n" + bob + jeff + vincent + gulin + Dustin + Adnan + nick + Rajarshi + dog + rawr);
+                    System.out.println("List of Children" + "\n" + "0 :" + bob + "\n" +  "1 :" + jeff + "\n" + "2 :" + vincent + "\n" + "3 :" +gulin + "\n" + "4 :" + Dustin + "\n" + "5 :" + Adnan + "\n" + "6 :" +nick + "\n" + "7 :" + Rajarshi + "\n" + "8 :" + dog + "\n" + "9 :" +rawr + "\n");
                 }
 
                 if (choice == 2){
@@ -68,9 +68,9 @@ public class main {
                     System.out.println("Enter the nice action");
                     String action = key.nextLine();
                     thing.putNice(temp,action);
-
+                    System.out.println("Nice List :: ");
                     for (int x = 0; x < childList.size(); x++){
-                        System.out.println(thing.print(childList.get(x)));
+                        System.out.println(thing.printNice(childList.get(x)));
                     }
                 }
                 if (choice == 3){
@@ -80,9 +80,9 @@ public class main {
                     System.out.println("Enter the naughty action");
                     String action = key.nextLine();
                     thing.putNaughty(temp,action);
-
+                    System.out.println("Naughty List :: ");
                   for (int x = 0; x < childList.size(); x++){
-                      System.out.println(thing.print(childList.get(x)));
+                      System.out.println(thing.printNaughty(childList.get(x)));
                   }
 
                 }
@@ -91,7 +91,7 @@ public class main {
                     for (int x = 0; x < childList.size(); x++){
                         stuff.determine(childList.get(x));
                         thing.determineNiceLvl(childList.get(x));
-                        System.out.println(childList.get(x));
+                        System.out.println("Nice Level :: " + childList.get(x).getNiceLvl());
                     }
                 }
                 if (choice == 5){
@@ -101,7 +101,7 @@ public class main {
                     }
                     while (!theQueue.isEmpty()){
                         child temp = theQueue.poll();
-                        System.out.println(temp + stuff.showAll(temp)+ " Presents");
+                        System.out.println(temp.getName() + " | " + temp.getAddress() + " | "+ stuff.showAll(temp)+ " Presents");
                     }
                 }
             }
